@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+
 body{
-    font-family: poppins;
-    height: 100vh;
-    width: 100%;
     background: linear-gradient(175deg, #9ad2ff 10% , #3532e4 100%)
 }
 
@@ -16,37 +21,43 @@ header{
 }
 
 .drawer{
+    height: 80px;
+    background: black;
     padding:5 30;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .drawer .name a{
-    font-size: 30px;
-    color: #000;
+    font-size: 35px;
+    color: white;
     text-decoration: none;
     font-weight: 500;
 }
 
 .drawer .menu{
     display: flex;
+    list-style: none;
 }
 
 .drawer .menu li{
-    list-style: none;
     margin: 0 15px;
 }
 
 .drawer .menu li a{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
     text-decoration: none;
-    color: black;
-    transition: all 0.7s ease;
+    color: white;
+    transition: all 0.5s ease;
 }
 
-.drawer .menu a:hover{
-    color: #f2f2f2
+.drawer .menu li a:hover{
+    color: rgb(0, 0, 0);
+    padding: 0 15;
+    border-radius: 8px;
+    background-color: white;
 }
 
 .main-text{
@@ -54,35 +65,51 @@ header{
     padding: 0 30px;
 }
 
-@media (max-width: 700px) {
- 
-    .drawer{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu{
-        margin: 10 0 20 0;
-    }
-    
+.humberger{
+    color: white;
+    font-size: 25;
+    cursor: pointer;
+    display: none;
 }
 
-@media(max-width:410px){
-    header{
+#isClicked{
+    display: none;
+}
+
+@media (max-width: 800px) {
+ 
+    
+    .drawer .menu{
+        display: block;
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background:black;
         height: 100vh;
         width: 100%;
+        transition: all 0.3s ease;
+        text-align: center;
     }
-   
-    .drawer .name a{
-        font-size: 70px;
-    }
-
-    .drawer .menu li a{
-        font-size: 50px;
-        font-weight: 500;
-        text-decoration: none;
-        color: black;
+    
+    #isClicked:checked ~ .menu{
+        right: 0%;
         transition: all 0.7s ease;
     }
 
+    .humberger{
+        font-size: 25;
+        display: block;
+    }
+
+    .drawer .menu li{
+        margin: 50px 0;
+        display: block;
+        transition: all 2s ease;
+    }
+
+    .drawer .menu .li a{
+        font-size: 30;
+        padding: 0 15;
+    }
+    
 }
