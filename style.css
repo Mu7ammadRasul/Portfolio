@@ -30,7 +30,7 @@ header{
 }
 
 .drawer .name a{
-    font-size: 35px;
+    font-size: 30px;
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -95,10 +95,13 @@ header{
         right: 0%;
         transition: all 0.7s ease;
     }
-
+    
+    #isClicked:checked ~ .humberger i::before{
+        content: "\F00d";
+    }
     .humberger{
         font-size: 25;
-        display: block;
+        display: block; 
     }
 
     .drawer .menu li{
