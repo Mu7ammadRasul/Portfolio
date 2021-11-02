@@ -9,15 +9,7 @@
 
 
 body{
-    background: linear-gradient(175deg, #9ad2ff 10% , #3532e4 100%)
-}
-
-header{
-    height: 100vh;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    margin: auto;
+    background: linear-gradient(175deg, #9ad2ff 10% , #4572ee 100%)
 }
 
 .drawer{
@@ -85,9 +77,80 @@ header{
     opacity: 0.9;
 }
 
+.Centeredtext{
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+
+.explore{
+    text-decoration: none;
+    color: black;
+    background: white;
+    border-radius: 5px;
+    padding: 8;
+    letter-spacing: 2px;
+}
+
+.explore:hover{
+    word-spacing: 100%;
+    color: white;
+    letter-spacing: 5px;
+    transition: all 0.5s ease;
+    background: black;
+}
+
+.socials{
+    list-style-type: none;
+    position: absolute;
+    top: 30%;
+    right: 0; 
+    display: block;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socials li{
+    margin: 25 30; 
+    display: block;
+}
+.socials .fb a{
+    color: white;
+}
+.socials .inst a{
+    color:white
+}
+.socials .reddit a{
+    color: white
+}
+.socials .twitter a{
+    color: white
+    
+}
+.socials li a{
+    font-size: 35;
+}
+.socials li:hover{
+     transition: all .3s ease;
+     -webkit-transform: scale(1.15);
+     color: #4572ee;
+}
+
+/*this below is home section*/
+.work{
+    margin: 30;
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+}
+
 
 @media (max-width: 950px) {
  
+   
     
     .drawer .menu{
         display: block;
@@ -112,7 +175,7 @@ header{
         content: "\F00d";
     }
     .humberger{
-        font-size: 25;
+        font-size: 20;
         display: block; 
     }
 
@@ -126,5 +189,28 @@ header{
         font-size: 30;
         padding: 0 15;
     }
+
+    .Centeredtext{
+        position: absolute;
+        top: 95%;
+        left: 30%;
+        color: white;
+        transform: translate(-50%, -50%);
+      }
+
+     .Centeredtext h2{
+         font-size: 20;
+     }
+     .Centeredtext h4{
+         font-size: 15;
+     }
+
+      .Centeredtext .explore{
+          font-size: 15;
+      }
+
+      .socials li a{
+            font-size: 25;
+      }
     
 }
