@@ -93,13 +93,14 @@ body{
     border-radius: 5px;
     padding: 8;
     letter-spacing: 2px;
+    transition:all .3s ease;
 }
 
 .explore:hover{
     word-spacing: 100%;
     color: white;
     letter-spacing: 5px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     background: black;
 }
 
@@ -115,10 +116,12 @@ body{
 
 .socials li{
     margin: 25 30; 
+    transition: all 0.3s ease;
     display: block;
 }
 .socials .fb a{
     color: white;
+
 }
 .socials .inst a{
     color:white
@@ -135,7 +138,7 @@ body{
 }
 .socials li:hover{
      transition: all .3s ease;
-     -webkit-transform: scale(1.15);
+     -webkit-transform: scale(1.25);
      color: #4572ee;
 }
 
@@ -150,8 +153,6 @@ body{
 
 @media (max-width: 950px) {
  
-   
-    
     .drawer .menu{
         display: block;
         position: fixed;
@@ -160,7 +161,7 @@ body{
         background:rgba(0, 0, 0, 0.3);
         height: 100vh;
         width: 100%;
-        transition: all 0.3s ease;
+        transition: all 0.7s ease;
         text-align: center;
         z-index: 1;
         overflow: hidden;
