@@ -9,7 +9,7 @@
 
 
 body{
-    background: linear-gradient(175deg, #9ad2ff 10% , #4572ee 100%)
+    background: white
 }
 
 .drawer{
@@ -22,10 +22,17 @@ body{
 }
 
 .drawer .name a{
-    font-size: 30px;
+    font-size: 35px;
     color: white;
     text-decoration: none;
     font-weight: 500;
+    transition: all .3s ease;
+    
+}
+
+.drawer .name a:hover{
+    transition: all .3 ease;
+    font-size: 37;
 }
 
 .drawer .menu{
@@ -47,8 +54,8 @@ body{
 
 .drawer .menu li a:hover{
     color: rgb(0, 0, 0);
-    padding: 0 15;
-    border-radius: 8px;
+    padding: 3 15;
+    border-radius: 5px;
     background-color: white;
 }
 
@@ -144,11 +151,45 @@ body{
 
 /*this below is work section*/
 .work{
-    margin: 30;
-    text-align: center;
-    text-decoration: underline;
-    color: white;
+    height: 100vh;
+    background: white;
 }
+.center-work{
+    padding-top: 1rem;
+    text-align: center;
+    color: black;
+    letter-spacing: 0.1rem;
+}
+
+.work-reveal{
+    left: 0;
+    top: 0;
+    margin-left: 2rem;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+    color: black;
+}
+
+.work-reveal img{
+    width: 400;
+    height: 625;
+    animation: animate 4s infinite linear;
+}
+
+
+@keyframes animate{
+    0%, 100%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+}
+
+
+
+
 
 
 @media (max-width: 950px) {
@@ -213,5 +254,19 @@ body{
       .socials li a{
             font-size: 25;
       }
+
+      .work-reveal{
+        left: 0;
+        top: 0;
+        margin: 2rem;
+        justify-content: space-between;
+        display: block;
+        position: relative;
+    }
+
+    .work-reveal img{
+    height: 450;
+    width: 300;
+    }
     
 }
