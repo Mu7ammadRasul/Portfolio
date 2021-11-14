@@ -12,9 +12,14 @@ body{
     background: white
 }
 
+main{
+    height: 100vh;
+}
+
+
 .drawer{
-    height: 80px;
-    background: black;
+    height: 10vh;
+    background:rgba(0, 0, 0, 0.9);
     padding:5 30;
     display: flex;
     align-items: center;
@@ -79,14 +84,14 @@ body{
     width: 100%;
     left: 0;
     top: 0;
-    height: 100%;
+    height: 90vh;
     object-fit: cover;
     opacity: 0.9;
 }
 
 .Centeredtext{
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 20%;
   color: white;
   transform: translate(-50%, -50%);
@@ -151,7 +156,7 @@ body{
 
 /*this below is work section*/
 .work{
-    height: 100vh;
+    height: auto;
     background: white;
 }
 .center-work{
@@ -164,17 +169,20 @@ body{
 .work-reveal{
     left: 0;
     top: 0;
-    margin-left: 2rem;
     justify-content: space-between;
     display: flex;
     position: relative;
     color: black;
 }
 
-.work-reveal img{
+.work-text{
+    margin: 0 1rem 1rem 1rem;
+}
+
+.work-reveal .Phone-Quran{
     width: 400;
     height: 625;
-    animation: animate 4s infinite linear;
+    animation: animate 5s infinite linear;
 }
 
 .image-container{
@@ -182,16 +190,15 @@ body{
     border-radius: 15px;
     top: 0;
     left:0;
-    margin-right: 1rem;
-    background-color: rgba(0, 0, 0, 0.1);
+    margin: 5rem 1rem 0 1rem;
+    background-color: rgb(81, 238, 238);
     width: 425;
     height: 640;
     transition: all .3s ease;
 }
 
-.image-container:hover{
-    transform: scale(1.05);
-    transition: all .3s ease;
+.image-container img:hover{
+    cursor: pointer;
 }
 
 @keyframes animate{
@@ -204,18 +211,131 @@ body{
 }
 
 
+.other-works{
+    display: grid;
+    grid-gap: 1px;
+    margin: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.other-works .box{
+    overflow: hidden;
+    background-color: red;
+    border-radius: 20px;
+    margin: .5rem;
+}
+
+.other-works img{
+    width: 100%;
+    height: 300;
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+
+.other-works img:hover{
+   transition: all .3s ease;
+   transform: scale(1.05);
+   opacity: .95;
+}
+
+hr{
+    margin: auto;
+    width: 97%;
+    border:0;
+    height: 2px;
+    border-radius: 20px;
+    background:grey;
+}
+/*this below is islamic section*/
+
+.islamic{
+    background-color: black;
+    height: 100vh;
+}
+
+.center-islamic{
+    text-align: center;
+    padding-top: 1rem;
+    color: white;
+    align-items: center;
+}
+
+/* this below is universe section*/
+.universe{
+    background-color: white;
+    height: 100vh;
+}
+
+.center-universe{
+    text-align: center;
+    padding-top: 1rem;
+    color: black;
+    align-items: center;
+}
+
+.soon{
+    position: absolute;
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    transform: translate(50%, 50%);
+}
+.soon .universeT{
+    position: absolute;
+    align-items: center;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    transform: translate(50%, 50%);
+}
+
+.soon span{
+  background-color: red;
+  width: 15px;
+  height: 15px;
+  border-radius: 70%;
+  margin: 0 5px;
+  animation: soonDots 2s infinite linear;
+}
+
+.soon span:nth-child(2){
+    animation-delay: .9s;
+    background-color: greenyellow;
+}
+.soon span:nth-child(3){
+    animation-delay: .6s;
+    background-color: gold;
+}
+.soon span:nth-child(4){
+    animation-delay: .3s;
+    background-color: aqua;
+}
+
+@keyframes soonDots{
+  50%{
+      opacity: 0;
+      transform: scale(.9) translateY(15px);
+  }
+}
 
 
-
-
-@media (max-width: 950px) {
+@media (max-width: 800px) {
  
+    main{
+        height: 100vh;
+    }
     .drawer .menu{
         display: block;
         position: fixed;
         top: 80px;
         right: -100%;
-        background:rgba(0, 0, 0, 0.3);
         height: 100vh;
         width: 100%;
         transition: all 0.7s ease;
@@ -235,6 +355,7 @@ body{
     .humberger{
         font-size: 20;
         display: block; 
+        color: wheat;
     }
 
     .drawer .menu li{
@@ -250,7 +371,7 @@ body{
 
     .Centeredtext{
         position: absolute;
-        top: 95%;
+        top: 90%;
         left: 30%;
         color: white;
         transform: translate(-50%, -50%);
@@ -271,6 +392,10 @@ body{
             font-size: 25;
       }
 
+      .work{
+          height:auto
+      }
+
       .work-reveal{
         left: 0;
         top: 0;
@@ -280,15 +405,23 @@ body{
         position: relative;
     }
 
-    .work-reveal img{
-    height: 450;
-    width: 300;
-    }
     .image-container{
         margin-top: 1rem;
-        transition: all .3s ease;
-        height: 470;
-        width: 325;
+        align-items: center;
+        width: 95%;
+        height: 480;
     }
+
+    .image-container .Phone-Quran{
+    height: 450;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    }
+  
     
+    .other-works{
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
 }
